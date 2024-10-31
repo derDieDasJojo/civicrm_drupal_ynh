@@ -2,8 +2,8 @@
 
 packaging_format = 2
 
-id = "civicrm_drupal7"
-name = "CiviCRM on Drupal 7"
+id = "civicrm_drupal"
+name = "CiviCRM on Drupal"
 description.en = "CRM for non-profits, NGOs and advocacy organizations"
 description.fr = "CRM pour organisations à but non lucratif et ONG"
 
@@ -29,6 +29,7 @@ sso = false
 disk = "50M"
 ram.build = "50M"
 ram.runtime = "50M"
+helpers_version = "2.1"
 
 [install]
     [install.domain]
@@ -36,7 +37,7 @@ ram.runtime = "50M"
 
     [install.path]
     type = "path"
-    default = "/drupal7"
+    default = "/"
 
     [install.init_main_permission]
     type = "group"
@@ -46,7 +47,7 @@ ram.runtime = "50M"
     ask.en = "Choose the application language"
     ask.fr = "Choisissez la langue de l'application"
     type = "select"
-    choices = ["fr", "en"]
+    choices = ["fr", "en", "de"]
     default = "en"
 
     [install.admin]
@@ -56,11 +57,12 @@ ram.runtime = "50M"
     type = "password"
 
     [install.install_profil]
-    ask.en = "Choose the Drupal 7 install profile to use"
-    ask.fr = "Choisissez le profile d'installation de Drupal 7"
+    ask.en = "Choose the Drupal install profile to use"
+    ask.fr = "Choisissez le profile d'installation de Drupal"
     type = "select"
     choices = ["minimal", "standard"]
     default = "standard"
+    
 
 [resources]
     [resources.sources]
@@ -81,19 +83,20 @@ ram.runtime = "50M"
 
     [resources.apt]
     packages = [
-        "php8.1-fpm",
-        "php8.1-cli",
-        "php8.1-gd",
-        "php8.1-mysql",
-        "php8.1-xml",
-        "php8.1-ldap",
-        "php8.1-mbstring",
-        "php8.1-curl",
-        "php8.1-soap",
-        "php8.1-intl",
+        "php8.3-fpm",
+        "php8.3-cli",
+        "php8.3-gd",
+        "php8.3-mysql",
+        "php8.3-xml",
+        "php8.3-ldap",
+        "php8.3-mbstring",
+        "php8.3-curl",
+        "php8.3-soap",
+        "php8.3-intl",
+        "php8.3-zip",
         "curl",
         "libzip-dev",
-        "mariadb-server",
+        "mariadb-server"
     ]
 
     [resources.database]

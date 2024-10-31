@@ -1,0 +1,3 @@
+prod:
+  root: __INSTALL_DIR__/__APP__/
+  uri: https://__DOMAIN____PATH__
