@@ -94,6 +94,7 @@ helpers_version = "2.1"
         "php8.3-soap",
         "php8.3-intl",
         "php8.3-zip",
+        "php8.3-bcmath",
         "curl",
         "libzip-dev",
         "mariadb-server"
